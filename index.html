@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TapFriend Mining</title>
+  <style>
+    body {
+      text-align: center;
+      background: black;
+      color: white;
+      font-family: Arial;
+    }
+    button {
+      font-size: 30px;
+      padding: 20px;
+      border-radius: 15px;
+      background: gold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🐹 TapFriend Mining</h1>
+<h2 id="coins">Coins: 0</h2>
+
+<button onclick="tap()">🪙 TAP</button>
+
+<script>
+let coins = 0;
+function tap(){
+  coins++;
+  document.getElementById("coins").innerText = "Coins: " + coins;
+}
+</script>
+
+</body>
+</html>
