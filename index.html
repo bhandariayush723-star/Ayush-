@@ -6,29 +6,27 @@
 <html>
 <head>
   <title>TapFriend Mining</title>
-  <style>
-    body {
-      text-align: center;
-      background: black;
-      color: white;
-      font-family: Arial;
-    }
 
-    button {
-      font-size: 30px;
-      padding: 20px;
-      border-radius: 15px;
-      background: gold;
-      margin-top: 30px;
-      cursor: pointer;
-    }
+<script>
+let coins = 0;
+let level = 1;
 
-    #level {
-      margin-top: 20px;
-      font-size: 25px;
-      color: cyan;
-    }
-  </style>
+function tap() {
+  coins++;
+
+  // ✅ Sound Fix
+  let sound = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+  sound.play();
+
+  if (coins % 10 === 0) {
+    level++;
+    alert("🎉 Level Up! Now Level: " + level);
+  }
+
+  document.getElementById("coins").innerText = "Coins: " + coins;
+  document.getElementById("level").innerText = "Level: " + level;
+}
+</script>  
 </head>
 
 <body>
